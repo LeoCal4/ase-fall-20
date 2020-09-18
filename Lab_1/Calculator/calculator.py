@@ -11,7 +11,7 @@ def sum(m, n):
 # must subtract n from m until it gets to 0
 def divide(m, n):
     if n == 0:
-        return
+        raise ZeroDivisionError
     result = 0
     is_negative = m * n < 0
     m = abs(m)
@@ -20,3 +20,5 @@ def divide(m, n):
         m -= n
         result += 1
     result = -result if is_negative else result
+
+    return result
